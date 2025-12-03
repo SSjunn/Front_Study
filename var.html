@@ -1,0 +1,90 @@
+<script>
+    // 동적 타이핑
+    a = 1; // 숫자
+    console.log(typeof(a)); // 값의 타입
+    a = "이름"; // 문자열
+    console.log(typeof(a));
+    /*
+    타입의 종류
+    - number
+    - string
+    - boolean
+    - object
+    - function *(일급객체)
+    - null, undefined
+    */
+    /*
+    변수 선언 시 키워드
+    var, let, const
+    */
+   /*
+   let test  = alert;
+   test("하하");
+   */
+    var b = 1; // 선언
+    var b = 2; // 재선언(1)
+    console.log(b);
+
+    // var c; 이렇게 선언부만 상단으로 올라간다는거
+    // 호이스팅(hoisting) -> 코드 상단으로 선언부 이동
+    console.log(c);
+    var c = 10;
+
+    // let
+    let d = 10;
+    // let d = 20; 재선언 불가
+    d = 20; // 재할당은 가능
+    
+    // const
+    const e = 10;
+    // e = 20; 재할당 불가
+    const f = [1,2,3]; // 참조자료형으로 주소값이 들어가있음
+    f[0] = 4; // 같은 주소에서 값이 바뀜(변수 f가 바뀐게 아님)
+    console.log(f); // 4,2,3
+
+    // 참조자료형 : 객체, 배열, 함수
+    console.log(typeof(alert)); // alert의 타입 : function
+
+    // 템플릿 문자열
+    let name = "홍길동";
+    let text = "안녕하세요 저는 "+name+"입니다.";
+    text += "반갑습니다.";
+    let text2 = `안녕하세요 저는 ${name}입니다.
+반갑습니다.`;
+    console.log(text2);
+
+    /*
+    배열
+    - 길이제한 없음
+    - 타입제한 없음
+    - [] 사용
+    */
+    let g = 1; // 숫자
+    let h = '2'; // 문자
+    let i = g + h; // '1' + '2'
+    console.log(i, typeof(i));
+
+    // 강제 형 변환
+    // 문자 -> 숫자
+    let i2 = g + Number(h);
+    console.log(i2, typeof(i2));
+
+    let i3 = g + parseInt(h);
+    console.log(i3, typeof(i3));
+
+    // 숫자 -> 문자
+    let g2 = String(g);https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners
+    ge2 = g.toString(); // .toString(16) -> 16진수로 리턴
+    g2 = g + '';
+    console.log(g2, typeof(g2));
+
+    // if (?) ? : boolean
+    console.log(Boolean(g2));
+    // 값이 있으면 true, 없으면 false
+    g2 = []; // 주소값이 있으므로 true
+    if (g2) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+</script>
